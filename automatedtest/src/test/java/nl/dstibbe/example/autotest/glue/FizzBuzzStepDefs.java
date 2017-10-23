@@ -6,6 +6,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import nl.dstibbe.example.fizzbuzz.FizzBuzz;
 
 public class FizzBuzzStepDefs {
 
@@ -21,13 +22,12 @@ public class FizzBuzzStepDefs {
         this.result = null;
     }
 
-    @When("^FizzBuzz called for round ([0-9]+)$")
+    @When("^FizzBuzz called for round 5$")
     public void fizzBuzzCalledWith(int round) throws Throwable {
-        result = "Buzz";
-//        result = new FizzBuzz().play(345);
+        result = new FizzBuzz().play(5);
     }
 
-    @Then("^Result has value ([a-zA-Z]+)$")
+    @Then("^Result has value Buzz$")
     public void resultHasValue(String value){
         Assert.assertEquals("Unexpected fizzbuzz result", value, result);
     }
