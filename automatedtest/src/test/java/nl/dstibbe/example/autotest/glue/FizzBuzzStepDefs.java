@@ -23,12 +23,12 @@ public class FizzBuzzStepDefs {
     }
 
     @When("^FizzBuzz called for round 5$")
-    public void fizzBuzzCalledWith(int round) throws Throwable {
+    public void fizzBuzzCalledWith() throws Throwable {
         result = new FizzBuzz().play(5);
     }
 
     @Then("^Result has value Buzz$")
-    public void resultHasValue(String value){
-        Assert.assertEquals("Unexpected fizzbuzz result", value, result);
+    public void resultHasValue(){
+        Assert.assertEquals("Unexpected fizzbuzz result", "Buzz", result);
     }
 }
