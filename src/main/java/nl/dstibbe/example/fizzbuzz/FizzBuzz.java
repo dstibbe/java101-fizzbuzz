@@ -25,7 +25,7 @@ public class FizzBuzz {
      *
      * @param round round to play
      */
-    private void play(long round){
+    public String play(long round){
         String output = "";
         if( 0 == round % 3 ){
             output = output + "Fizz ";
